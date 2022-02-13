@@ -12,10 +12,18 @@ function getCurrentQuantity(fieldId, isPlusOrNot){
     }
 }
 
+// //--Phone Increment and Decrement Button--//
 document.getElementById('phone_plus_btn').addEventListener('click', function () {
     getCurrentQuantity('phone_quantity_field', true);
 });
-
 document.getElementById('phone_minus_btn').addEventListener('click', function () {
     getCurrentQuantity('phone_quantity_field', false);
+});
+
+// //--Case Increment and Decrement Button--//
+document.getElementById('case_plus_btn').addEventListener('click', function () {
+    getCurrentQuantity('case_quantity_field', true);
+});
+document.getElementById('case_minus_btn').addEventListener('click', function () {
+    getCurrentQuantity('case_quantity_field', false);
 });
