@@ -9,16 +9,19 @@ function getCurrentQuantity(fieldId, currentTotalPriceFieldId, initialPrice, isP
     if(isPlusOrNot){
         const newQuantity = quantity_value + 1;
         quantity_field.value = newQuantity;
-        const current_Total_Price = newQuantity * initialPrice;
-        current_Total_Price_field.innerText = current_Total_Price;
+        getIndividualTotalPrice(current_Total_Price_field, initialPrice, newQuantity);
     }else if(quantity_value > 0){
         const newQuantity = quantity_value - 1;
         quantity_field.value = newQuantity;
-        const current_Total_Price = newQuantity * initialPrice;
-        current_Total_Price_field.innerText = current_Total_Price;
+        getIndividualTotalPrice(current_Total_Price_field, initialPrice, newQuantity);
     }else{
         alert("Please don't click on minus when your quantity is 0!!!!!");
     }
+}
+
+function getIndividualTotalPrice(current_Total_Price_field, initialPrice, newQuantity){
+    const current_Total_Price = newQuantity * initialPrice;
+    current_Total_Price_field.innerText = current_Total_Price;
 }
 
 // //--Phone Increment and Decrement Button--//
