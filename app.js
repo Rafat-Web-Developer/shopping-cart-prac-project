@@ -39,9 +39,15 @@ function getTotalPrice(){
     const subTotalPrice = phoneTotalPrice + caseTotalPrice;
     subTotalField.innerText = subTotalPrice;
 
+
     const taxField = document.getElementById('tax');
     const tax = subTotalPrice / 10;
     taxField.innerText = tax;
+
+    const totalField = document.getElementById('total');
+    const total = subTotalPrice + tax;
+    totalField.innerText = total;
+
 }
 
 // //--Phone Increment and Decrement Button--//
